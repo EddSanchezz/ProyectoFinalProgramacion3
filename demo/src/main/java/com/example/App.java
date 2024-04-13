@@ -1,4 +1,4 @@
-package com.uniquindio.co;
+package com.example;
 
 /**
  * Hello world!
