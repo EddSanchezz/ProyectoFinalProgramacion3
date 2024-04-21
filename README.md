@@ -1,4 +1,4 @@
-La agencia de espectáculos "Nombre de la Agencia" desea modernizar su proceso de venta de
+La agencia de espectáculos "Ticketopia" desea modernizar su proceso de venta de
 boletas, ofreciendo a sus clientes una plataforma online para la compra de boletas de manera
 rápida y segura. Para ello, se requiere el desarrollo de un software que permita la gestión integral
 de la compra de boletas para los diferentes shows que ofrece la agencia, con las siguientes
