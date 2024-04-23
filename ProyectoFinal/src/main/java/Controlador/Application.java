@@ -8,7 +8,7 @@ package Controlador;
  *
  * @author Esteban S.
  */
-public class App {
+public class Application {
     
     public static void main(String[] args) {
         System.out.print("Hola mundo");
