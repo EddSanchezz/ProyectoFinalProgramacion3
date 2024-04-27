@@ -12,5 +12,21 @@ import Enum.tipoBoleta;
  */
 public class Boleta {
     private tipoBoleta categoria;
-    private float precio;
+
+
+
+    public Boleta(tipoBoleta categoria, float precio) {
+        this.categoria = categoria;
+    }
+
+
+
+    public tipoBoleta getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(tipoBoleta categoria) {
+        this.categoria = categoria;
+    }
+
+    
 }
