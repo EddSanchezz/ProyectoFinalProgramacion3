@@ -4,10 +4,13 @@
  */
 package Modelo;
 
+import Enum.tipoBoleta;
+
 /**
  *
  * @author metzu
  */
 public class Boleta {
-    
+    private tipoBoleta categoria;
+    private float precio;
 }
