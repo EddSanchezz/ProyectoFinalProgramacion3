@@ -42,6 +42,19 @@ public class Evento {
         this.cantAsientosOro = (int) (cantAsientos* 0.1);
     }
 
+    /**
+     * metodo dedicado a agregar los asientos faltantes debido a la división de asientos
+     */
+    public void agregarAsientoPerdido(){
+        int sumaAsientos = cantAsientosBronce + cantAsientosPlata + cantAsientosOro;
+        int diferencia = 0;
+        if(cantAsientos != cantAsientosBronce+cantAsientosPlata+cantAsientosOro){
+            diferencia = cantAsientos - sumaAsientos;
+            cantAsientosBronce = cantAsientosBronce + diferencia;
+        }
+
+    }
+
 
 
     public int getCantAsientosBronce() {
