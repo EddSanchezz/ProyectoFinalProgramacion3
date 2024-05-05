@@ -6,6 +6,7 @@ package Modelo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -24,10 +25,11 @@ public class Evento {
     private int cantAsientosBronce;
     private int cantAsientosPlata;
     private int cantAsientosOro;
+    private HashMap<Integer,Boleta> asientos;
 
 
     public Evento(boolean disponible, String nombre, LocalDate fecha, String lugar, ArrayList<String> artistas,
-            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos) {
+            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos, HashMap<Integer,Boleta> asientos) {
         this.disponible = disponible;
         this.nombre = nombre;
         this.fecha = fecha;
@@ -40,6 +42,7 @@ public class Evento {
         this.cantAsientosBronce = (int) (cantAsientos* 0.6);
         this.cantAsientosPlata = (int) (cantAsientos* 0.3);
         this.cantAsientosOro = (int) (cantAsientos* 0.1);
+        this.asientos = asientos;
     }
 
     /**
@@ -129,10 +132,15 @@ public class Evento {
     public void setCantAsientos(int cantAsientos) {
         this.cantAsientos = cantAsientos;
     }
-    
-    
+
+    public Boleta getBoleta(int numAsiento) {
+        return this.asientos.get(numAsiento);
+    }
+
+    public void setAsientos(int numAsiento, Boleta boleta) {
+        this.asientos.put(numAsiento,boleta);
+    }
 
     
     
-
 }
