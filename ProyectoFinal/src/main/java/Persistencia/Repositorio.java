@@ -25,6 +25,8 @@ public class Repositorio<T extends Persistible>
             rutaRecursos = rutaRecursos.substring(0, -1);
         }
 
+        new File(rutaRecursos).mkdirs();
+
         this.ruta = rutaRecursos;
     }
 
@@ -40,7 +42,7 @@ public class Repositorio<T extends Persistible>
     @SuppressWarnings("unchecked")
     public T hallar(String id) throws IOException
     {
-        return (T) Persistencia.leerXml(id);
+        return (T) Persistencia.leerXml(ruta + "/" + id + ".xml");
     }
 
     /**
@@ -71,7 +73,7 @@ public class Repositorio<T extends Persistible>
             objeto.setId(id = UUID.randomUUID().toString());
         }
 
-        Persistencia.escribirXml(ruta + "/" + id, objeto);
+        Persistencia.escribirXml(ruta + "/" + id + ".xml", objeto);
     }
 
     /**
@@ -93,6 +95,6 @@ public class Repositorio<T extends Persistible>
      */
     public boolean eliminar(String id)
     {
-        return new File(ruta + "/" + id).delete();
+        return new File(ruta + "/" + id + ".xml").delete();
     }
 }

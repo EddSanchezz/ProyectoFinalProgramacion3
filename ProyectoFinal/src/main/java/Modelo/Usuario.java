@@ -5,10 +5,6 @@ import java.io.Serializable;
 import Persistencia.Persistible;
 import Persistencia.Repositorio;
 
-/**
- *
- * @author metzu
- */
 public class Usuario implements Serializable, Persistible
 {
     /**
@@ -135,8 +131,6 @@ public class Usuario implements Serializable, Persistible
      */
     public static Repositorio<Usuario> repositorio()
     {
-        return new Repositorio<Usuario>(
-            "src/main/resources"
-        );
+        return new Repositorio<Usuario>("src/main/resources/usuarios");
     }
 }

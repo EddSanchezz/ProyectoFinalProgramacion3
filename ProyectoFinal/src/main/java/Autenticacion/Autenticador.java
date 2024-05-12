@@ -9,7 +9,7 @@ public final class Autenticador
     /**
      * identificador del usuario autenticado
      */
-    public static String usuarioId;
+    private static String usuarioId;
 
     /**
      * contructor vacio
@@ -23,7 +23,7 @@ public final class Autenticador
      * 
      * @throws IOException
      */
-    public void intentar(Credenciales credenciales) throws IOException
+    public static void intentar(Credenciales credenciales) throws IOException
     {
         Usuario usuario = credenciales.hallar();
 
@@ -33,9 +33,19 @@ public final class Autenticador
     /**
      * olvida al usuario actual autenticado
      */
-    public void olvidarUsuario()
+    public static void olvidarUsuario()
     {
         Autenticador.usuarioId = null;
+    }
+
+    /**
+     * comprueba si un usuario se encuentra autenticado
+     * 
+     * @return un usuario esta autenticado
+     */
+    public static boolean estaAutenticado()
+    {
+        return Autenticador.usuarioId != null;
     }
 
     /**
