@@ -4,8 +4,13 @@
  */
 package Controlador;
 
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
-
+import Modelo.Evento;
+import Utilidades.FuncionesEvento;
+import Utilidades.Persistencia;
 
 /**
  *
@@ -13,7 +18,7 @@ package Controlador;
  */
 public class Application {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
     }
     
