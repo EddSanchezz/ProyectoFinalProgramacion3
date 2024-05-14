@@ -5,10 +5,8 @@
 package Controlador;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
-import Modelo.Evento;
 import Utilidades.FuncionesEvento;
 import Utilidades.Persistencia;
 
@@ -19,7 +17,8 @@ import Utilidades.Persistencia;
 public class Application {
     
     public static void main(String[] args) throws IOException {
-        
+        ArrayList<ArrayList<String>>eventos = FuncionesEvento.CatalogoEventos();
+        System.out.println(eventos.get(0).get(0));
     }
     
 }
