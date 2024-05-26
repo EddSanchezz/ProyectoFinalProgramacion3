@@ -69,7 +69,7 @@ public class AdminFrame extends JFrame {
         
         JLabel lblNewLabel = new JLabel("");
         lblNewLabel.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
-        lblNewLabel.setBounds(0, 0, 284, 161);
+        lblNewLabel.setBounds(0, 0, 412, 276);
         panel.add(lblNewLabel);
         setVisible(true);
     }
