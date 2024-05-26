@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//VENTANA PARA INICIAR SESION COMO ADMIN
 public class AdminFrame extends JFrame {
     private JTextField correoField;
     private JPasswordField contrasenaField;
@@ -55,8 +56,19 @@ public class AdminFrame extends JFrame {
         getContentPane().add(panel);
         
         JButton btnVolver = new JButton("Volver");
+        btnVolver.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		dispose();
+        		new LoginFrame();
+        	}
+        });
         btnVolver.setBounds(10, 118, 100, 32);
         panel.add(btnVolver);
+        
+        JLabel lblNewLabel = new JLabel("");
+        lblNewLabel.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
+        lblNewLabel.setBounds(0, 0, 284, 161);
+        panel.add(lblNewLabel);
         setVisible(true);
     }
 

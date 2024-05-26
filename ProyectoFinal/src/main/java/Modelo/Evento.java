@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 import java.io.Serializable;
@@ -26,8 +22,8 @@ public class Evento implements Persistible, Serializable{
     private int cantAsientosBronce;
     private int cantAsientosPlata;
     private int cantAsientosOro;
-    private HashMap<Integer,Boleta> asientos;
     private String id;
+    private Locacion locacion;
 
     /**
      * constructor vacio para serializacion
@@ -47,7 +43,7 @@ public class Evento implements Persistible, Serializable{
      * @param cantAsientos
      */
     public Evento(boolean disponible, String nombre, LocalDate fecha, String lugar, ArrayList<String> artistas,
-            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos) {
+            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos, Locacion locacion) {  // Agrega el parámetro locacion
         this.disponible = disponible;
         this.nombre = nombre;
         this.fecha = fecha.toString();
@@ -56,25 +52,9 @@ public class Evento implements Persistible, Serializable{
         this.precioBoletaBronce = precioBoletaBronce;
         this.precioBoletaPlata = precioBoletaPlata;
         this.precioBoletaOro = precioBoletaOro;
-        this.cantAsientos = cantAsientos;
-        this.cantAsientosBronce = (int) (cantAsientos* 0.6);
-        this.cantAsientosPlata = (int) (cantAsientos* 0.3);
-        this.cantAsientosOro = (int) (cantAsientos* 0.1);
+        this.locacion = locacion;
+        setCantAsientos(cantAsientos);  // Usa el método setCantAsientos para establecer la cantidad de asientos
     }
-
-    /**
-     * metodo dedicado a agregar los asientos faltantes debido a la división de asientos
-     */
-    public void agregarAsientoPerdido(){
-        int sumaAsientos = cantAsientosBronce + cantAsientosPlata + cantAsientosOro;
-        int diferencia = 0;
-        if(cantAsientos != cantAsientosBronce+cantAsientosPlata+cantAsientosOro){
-            diferencia = cantAsientos - sumaAsientos;
-            cantAsientosBronce = cantAsientosBronce + diferencia;
-        }
-
-    }
-
 
     /**
      * obtiene la cantidad de asientos
@@ -164,25 +144,8 @@ public class Evento implements Persistible, Serializable{
         return fecha;
     }
 
-    /**
-     * devuelve la fecha del evento como un String
-     * @return
-     
-    public String getStringFecha() {
-        // define el formato deseado
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        // convierte el LocalDate a String usando el formato definido
-        String fechaComoString = fecha.format(formato);
-
-        return fechaComoString;
-    }*/
-
-    /**
-     *  establece la fecha del evento
-     * @param fecha
-     */
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha.toString();
     }
 
     /**
@@ -278,43 +241,13 @@ public class Evento implements Persistible, Serializable{
      * @param cantAsientos
      */
     public void setCantAsientos(int cantAsientos) {
+        if (cantAsientos > locacion.getCapacidadDeAsientos()) {
+            throw new IllegalArgumentException("La cantidad de asientos no puede ser mayor a la capacidad de la locación");
+        }
         this.cantAsientos = cantAsientos;
     }
 
-    /**
-     * obitene el numero de asiento de una boleta
-     * @param numAsiento
-     * @return
-     */
-    public Boleta getBoleta(int numAsiento) {
-        return this.asientos.get(numAsiento);
-    }
-
-    /**
-     * establece el numero de asiento de una boleta
-     * @param numAsiento
-     * @param boleta
-     */
-    public void setAsientos(int numAsiento, Boleta boleta) {
-        this.asientos.put(numAsiento,boleta);
-    }
-
-    /**
-     * obtiene la lista de asientos (codigo y boleta)
-     * @return asientos
-     */
-    public HashMap<Integer, Boleta> getAsientos() {
-        return asientos;
-    }
-
-    /**
-     * establece una lista de asientos (codigo y boleta)
-     * @param asientos
-     */
-    public void setAsientos(HashMap<Integer, Boleta> asientos) {
-        this.asientos = asientos;
-    }
-
+    
     /**
      * {@inheritDoc}
      * @return id

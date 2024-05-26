@@ -3,7 +3,10 @@ package Utilidades;
 import java.io.IOException;
 import java.util.ArrayList;
 import Excepciones.EventoRegistradoException;
+import Excepciones.UsuarioRegistradoException;
 import Modelo.Evento;
+import Modelo.Locacion;
+import Modelo.Usuario;
 import Persistencia.Repositorio;
 
 public class FuncionesEvento {
@@ -40,39 +43,28 @@ public class FuncionesEvento {
      * @return StringEventos
      * @throws IOException
      */
-    public static ArrayList<ArrayList<String>> CatalogoEventos() throws IOException{
+    public static ArrayList<Evento> CatalogoEventos() throws IOException{
         Repositorio<Evento> repo = Evento.repositorio();
-        ArrayList<ArrayList<String>> StringEventos = new ArrayList<>();
-        ArrayList<String> StringEvento = new ArrayList<>();
         ArrayList<Evento> eventos = (ArrayList<Evento>) repo.todos();
-
-        for(Evento evento : eventos){
-            StringEvento.add("nombre del evento: " + evento.getNombre());
-            StringEvento.add("lugar del evento: " + evento.getLugar());
-
-            //debido a que es una lista de artistas, se debe leer cada posicion
-            String artistas = " ";
-            for(String artista: evento.getArtistas()){
-                artistas += artista;
-                if(artista != evento.getArtistas().get(evento.getArtistas().size()-1)){
-                    artistas += ", ";
-                }
-            }
-            StringEvento.add("artistas: " + artistas);
-
-            StringEvento.add("fecha del evento:" + evento.getFecha());
-            StringEvento.add("cantidad de asientos: " + Integer.toString(evento.getCantAsientos()));
-            StringEvento.add("cantidad de asientos bronce: " + Integer.toString(evento.getCantAsientosBronce()));
-            StringEvento.add("cantidad de asientos plata: " + Integer.toString(evento.getCantAsientosPlata()));
-            StringEvento.add("cantidad de asientos oro: " + Integer.toString(evento.getCantAsientosOro()));
-            StringEvento.add("evento disponible: " + Boolean.toString(evento.isDisponible()));
-            StringEventos.add(StringEvento);
-        }
-
-
-        return StringEventos;
+        return eventos;
     }
+    
+    public static boolean registrarLocacion(String nombre, int capacidadDeAsientos) throws IOException {
+    	Locacion locacion = new Locacion(nombre,capacidadDeAsientos);
+    	
+        Repositorio<Locacion> repo = Locacion.repositorio();
 
+        for (Locacion u: repo.todos()) {
+            if (u.getNombre().equals(locacion.getNombre())) {
+                return false;
+            }
+        }
+        locacion.setId(null);
+        repo.escribir(locacion);
+        return true;
+    }
+    
+    
 
 
 }

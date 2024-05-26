@@ -6,8 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-//VENTANA QUE MUESTRA LOS EVENTOS AL USUARIO
-public class ListaDeEventosFrame extends JFrame {
+public class ConfigAperturaFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -19,7 +18,7 @@ public class ListaDeEventosFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ListaDeEventosFrame frame = new ListaDeEventosFrame();
+					ConfigAperturaFrame frame = new ConfigAperturaFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +30,7 @@ public class ListaDeEventosFrame extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ListaDeEventosFrame() {
+	public ConfigAperturaFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

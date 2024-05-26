@@ -1,42 +1,78 @@
 package Vista;
 
-import java.awt.EventQueue;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+//VENTANA PARA ADMINISTRAR EVENTOS COMO ADMIN
 
+
+@SuppressWarnings("serial")
 public class EventoAdminFrame extends JFrame {
+    public EventoAdminFrame() {
+        setTitle("Administrar Evento");
+        setSize(474, 343);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
 
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EventoAdminFrame frame = new EventoAdminFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+        JButton configurarHoraButton = new JButton("Configurar Hora de Apertura/Cierre");
+        configurarHoraButton.setBounds(224, 261, 213, 32);
+        configurarHoraButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ConfigAperturaFrame().setVisible(true);
+            }
+        });
+        panel.add(configurarHoraButton);
 
-	/**
-	 * Create the frame.
-	 */
-	public EventoAdminFrame() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        JButton volverButton = new JButton("Volver");
+        volverButton.setBounds(10, 261, 97, 32);
+        volverButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Cierra la ventana actual
+                dispose();
+                // Muestra la ventana AdminFrame
+                new AdminFrame().setVisible(true);
+            }
+        });
+        panel.add(volverButton);
 
-		setContentPane(contentPane);
-	}
+        getContentPane().add(panel);
+        
+                JButton agregarLocacionButton = new JButton("Agregar Locacion");
+                agregarLocacionButton.setBounds(150, 168, 149, 32);
+                panel.add(agregarLocacionButton);
+                
+                        JButton agregarEventoButton = new JButton("Agregar Evento");
+                        agregarEventoButton.setBounds(150, 110, 149, 32);
+                        panel.add(agregarEventoButton);
+                        
+                        JLabel lblNewLabel = new JLabel("");
+                        lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
+                        lblNewLabel.setBounds(0, 0, 458, 304);
+                        panel.add(lblNewLabel);
+                        agregarEventoButton.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                new SetEventoFrame().setVisible(true);
+                            }
+                        });
+                agregarLocacionButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        new SetLocacionFrame().setVisible(true);
+                    }
+                });
+        setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        new EventoAdminFrame();
+    }
 }
+

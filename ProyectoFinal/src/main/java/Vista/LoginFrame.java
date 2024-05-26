@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//VENTANA PARA ELEGIR SI INICIAR SESION O REGISTRARSE
 @SuppressWarnings("serial")
 public class LoginFrame extends JFrame {
     public LoginFrame() {

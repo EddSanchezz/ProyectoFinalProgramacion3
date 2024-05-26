@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+//VENTANA PARA REGISTRAR USUARIO
 public class RegistroFrame extends JFrame {
     private JTextField nombreField;
     private JTextField correoField;
@@ -73,14 +74,12 @@ public class RegistroFrame extends JFrame {
         });
         panel.add(registrarButton);
 
-        JButton cancelarButton = new JButton("Cancelar");
+        JButton cancelarButton = new JButton("Volver");
         cancelarButton.setBounds(28, 250, 103, 28);
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Cierra la ventana actual
                 dispose();
-                // Muestra la ventana LoginFrame
                 new LoginFrame().setVisible(true);
             }
         });
