@@ -4,8 +4,11 @@
  */
 package Controlador;
 
+import java.io.IOException;
+import java.util.ArrayList;
 
-
+import Utilidades.FuncionesEvento;
+import Utilidades.Persistencia;
 
 /**
  *
@@ -13,8 +16,9 @@ package Controlador;
  */
 public class Application {
     
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws IOException {
+        ArrayList<ArrayList<String>>eventos = FuncionesEvento.CatalogoEventos();
+        System.out.println(eventos.get(0).get(0));
     }
     
 }
