@@ -5,6 +5,7 @@ import java.io.Serializable;
 import Persistencia.Persistible;
 import Persistencia.Repositorio;
 
+@SuppressWarnings("serial")
 public class Usuario implements Serializable, Persistible
 {
     /**

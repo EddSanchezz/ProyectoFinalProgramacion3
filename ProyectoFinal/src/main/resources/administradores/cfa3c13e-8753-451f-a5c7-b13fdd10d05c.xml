@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22" class="java.beans.XMLDecoder">
+ <object class="Modelo.Administrador">
+  <void property="clave">
+   <string>321</string>
+  </void>
+  <void property="correo">
+   <string>est@gmail.com</string>
+  </void>
+  <void property="id">
+   <string>cfa3c13e-8753-451f-a5c7-b13fdd10d05c</string>
+  </void>
+  <void property="nombre">
+   <string>est</string>
+  </void>
+ </object>
+</java>
