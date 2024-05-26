@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Utilidades.FuncionesUsuario;
+import java.awt.Color;
 
 //VENTANA PARA INICIAR SESION COMO USUARIO
 @SuppressWarnings("serial")
@@ -31,6 +32,7 @@ public class UsuarioFrame extends JFrame {
         panel.add(btnRegresar);
 
         JLabel label = new JLabel("Correo:");
+        label.setForeground(new Color(255, 255, 255));
         label.setBounds(64, 54, 86, 33);
         panel.add(label);
         correoField = new JTextField();
@@ -38,6 +40,7 @@ public class UsuarioFrame extends JFrame {
         panel.add(correoField);
 
         JLabel label_1 = new JLabel("Contraseña:");
+        label_1.setForeground(new Color(255, 255, 255));
         label_1.setBounds(64, 120, 86, 33);
         panel.add(label_1);
         contrasenaField = new JPasswordField();
@@ -66,7 +69,7 @@ public class UsuarioFrame extends JFrame {
         lblIngresaPorfis.setBounds(126, 11, 162, 14);
         panel.add(lblIngresaPorfis);
         
-        JLabel lblNewLabel = new JLabel("New label");
+        JLabel lblNewLabel = new JLabel("");
         lblNewLabel.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
         lblNewLabel.setBounds(0, 0, 384, 261);
         panel.add(lblNewLabel);

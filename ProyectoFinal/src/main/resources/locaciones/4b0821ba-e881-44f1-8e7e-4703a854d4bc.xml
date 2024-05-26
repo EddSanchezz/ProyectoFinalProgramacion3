@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22" class="java.beans.XMLDecoder">
+ <object class="Modelo.Locacion">
+  <void property="capacidadDeAsientos">
+   <int>300</int>
+  </void>
+  <void property="id">
+   <string>4b0821ba-e881-44f1-8e7e-4703a854d4bc</string>
+  </void>
+  <void property="nombre">
+   <string>unicentro</string>
+  </void>
+ </object>
+</java>

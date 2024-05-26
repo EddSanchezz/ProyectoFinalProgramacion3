@@ -37,8 +37,7 @@ public class FuncionesEvento {
     }
 
     /**
-     * este metodo se encarga de convertir todos los eventos en una lista de arreglos para trabajar
-     * mas facilmente con los elementos
+     * este metodo se encarga de devolver una lista de los eventos guardados
      * @param ruta
      * @return StringEventos
      * @throws IOException
@@ -49,6 +48,13 @@ public class FuncionesEvento {
         return eventos;
     }
     
+    /**
+     * Metodo para registrar una locacion
+     * @param nombre
+     * @param capacidadDeAsientos
+     * @return
+     * @throws IOException
+     */
     public static boolean registrarLocacion(String nombre, int capacidadDeAsientos) throws IOException {
     	Locacion locacion = new Locacion(nombre,capacidadDeAsientos);
     	

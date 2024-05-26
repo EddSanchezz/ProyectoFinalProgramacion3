@@ -20,7 +20,7 @@ public class EventoAdminFrame extends JFrame {
         panel.setLayout(null);
 
         JButton configurarHoraButton = new JButton("Configurar Hora de Apertura/Cierre");
-        configurarHoraButton.setBounds(224, 261, 213, 32);
+        configurarHoraButton.setBounds(199, 261, 238, 32);
         configurarHoraButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -65,6 +65,7 @@ public class EventoAdminFrame extends JFrame {
                 agregarLocacionButton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                    	dispose();
                         new SetLocacionFrame().setVisible(true);
                     }
                 });

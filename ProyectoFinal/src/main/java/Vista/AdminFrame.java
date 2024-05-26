@@ -16,7 +16,7 @@ public class AdminFrame extends JFrame {
 
     public AdminFrame() {
         setTitle("Iniciar sesión como Admin");
-        setSize(300, 200);
+        setSize(428, 315);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -24,21 +24,23 @@ public class AdminFrame extends JFrame {
         panel.setLayout(null);
 
         JLabel label = new JLabel("Correo:");
-        label.setBounds(10, 18, 142, 25);
+        label.setForeground(new Color(255, 255, 255));
+        label.setBounds(41, 84, 142, 25);
         panel.add(label);
         correoField = new JTextField();
-        correoField.setBounds(162, 18, 100, 25);
+        correoField.setBounds(184, 84, 169, 25);
         panel.add(correoField);
 
         JLabel label_1 = new JLabel("Contraseña:");
-        label_1.setBounds(10, 54, 142, 25);
+        label_1.setForeground(new Color(255, 255, 255));
+        label_1.setBounds(41, 133, 142, 25);
         panel.add(label_1);
         contrasenaField = new JPasswordField();
-        contrasenaField.setBounds(162, 54, 100, 25);
+        contrasenaField.setBounds(184, 133, 169, 25);
         panel.add(contrasenaField);
 
         JButton iniciarSesionButton = new JButton("Iniciar sesión");
-        iniciarSesionButton.setBounds(174, 118, 100, 32);
+        iniciarSesionButton.setBounds(302, 233, 100, 32);
         iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -62,7 +64,7 @@ public class AdminFrame extends JFrame {
         		new LoginFrame();
         	}
         });
-        btnVolver.setBounds(10, 118, 100, 32);
+        btnVolver.setBounds(10, 233, 100, 32);
         panel.add(btnVolver);
         
         JLabel lblNewLabel = new JLabel("");
