@@ -88,7 +88,7 @@ public class RegistroFrame extends JFrame {
         getContentPane().add(panel);
         
         JLabel lblNewLabel = new JLabel("");
-        lblNewLabel.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
+        lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
         lblNewLabel.setBounds(0, 0, 445, 301);
         panel.add(lblNewLabel);
         setVisible(true);

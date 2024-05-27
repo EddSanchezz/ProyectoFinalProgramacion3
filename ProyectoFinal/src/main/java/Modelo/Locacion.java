@@ -53,7 +53,7 @@ public class Locacion implements Serializable, Persistible{
     
     public static Repositorio<Locacion> repositorio()
     {
-        return new Repositorio<Locacion>("src/main/resources/locaciones");
+        return new Repositorio<Locacion>("src\\main\\resources\\locaciones");
     }
 
 }

@@ -3,6 +3,9 @@ package Vista;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import Utilidades.FuncionesApertura;
 import Utilidades.FuncionesUsuario;
 import java.awt.Color;
 
@@ -49,13 +52,20 @@ public class UsuarioFrame extends JFrame {
 
         JButton iniciarSesionButton = new JButton("Iniciar sesión");
         iniciarSesionButton.setBounds(257, 217, 117, 33);
+        
         iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	String hora = FuncionesApertura.leerHora();
                 boolean accesoPermitido = FuncionesUsuario.verificarUsuario(correoField.getText(), new String(contrasenaField.getPassword()));
                 if (accesoPermitido) {
-                    new ListaDeEventosFrame().setVisible(true);
-                    setVisible(false);
+                	dispose();
+                	try {
+						new ListaDeLocacionesFrame().setVisible(FuncionesApertura.verificarApertura(hora));
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}  
                 } else {
                     JOptionPane.showMessageDialog(null, "Las credenciales que intenta ingresar son incorrectas", "Error", JOptionPane.ERROR_MESSAGE);
                 }
@@ -70,7 +80,7 @@ public class UsuarioFrame extends JFrame {
         panel.add(lblIngresaPorfis);
         
         JLabel lblNewLabel = new JLabel("");
-        lblNewLabel.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
+        lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
         lblNewLabel.setBounds(0, 0, 384, 261);
         panel.add(lblNewLabel);
         setVisible(true);

@@ -1,9 +1,14 @@
 package Vista;
 
-import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 //VENTANA PARA ADMINISTRAR EVENTOS COMO ADMIN
 
@@ -19,7 +24,7 @@ public class EventoAdminFrame extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
-        JButton configurarHoraButton = new JButton("Configurar Hora de Apertura/Cierre");
+        JButton configurarHoraButton = new JButton("Configurar Hora de Apertura");
         configurarHoraButton.setBounds(199, 261, 238, 32);
         configurarHoraButton.addActionListener(new ActionListener() {
             @Override
@@ -59,7 +64,12 @@ public class EventoAdminFrame extends JFrame {
                         agregarEventoButton.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                new SetEventoFrame().setVisible(true);
+                                try {
+                                	dispose();
+									new SetEventoFrame().setVisible(true);
+								} catch (IOException e1) {
+									e1.printStackTrace();
+								}
                             }
                         });
                 agregarLocacionButton.addActionListener(new ActionListener() {

@@ -82,7 +82,7 @@ public class SetLocacionFrame extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException {
         new SetEventoFrame();
     }
 }

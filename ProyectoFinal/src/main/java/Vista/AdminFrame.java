@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 //VENTANA PARA INICIAR SESION COMO ADMIN
+@SuppressWarnings("serial")
 public class AdminFrame extends JFrame {
     private JTextField correoField;
     private JPasswordField contrasenaField;
@@ -46,6 +47,7 @@ public class AdminFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 boolean accesoPermitido = FuncionesAdmin.verificarAdmin(correoField.getText(), new String(contrasenaField.getPassword()));
                 if (accesoPermitido) {
+                	dispose();
                     new EventoAdminFrame().setVisible(true);
                     setVisible(false);
                 } else {
@@ -68,7 +70,7 @@ public class AdminFrame extends JFrame {
         panel.add(btnVolver);
         
         JLabel lblNewLabel = new JLabel("");
-        lblNewLabel.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
+        lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
         lblNewLabel.setBounds(0, 0, 412, 276);
         panel.add(lblNewLabel);
         setVisible(true);

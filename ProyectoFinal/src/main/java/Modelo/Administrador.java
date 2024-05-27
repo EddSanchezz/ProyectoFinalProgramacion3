@@ -139,6 +139,6 @@ public class Administrador implements Serializable, Persistible
      */
     public static Repositorio<Administrador> repositorio()
     {
-        return new Repositorio<Administrador>("src/main/resources/administradores");
+        return new Repositorio<Administrador>("src\\main\\resources\\administradores");
     }
 }

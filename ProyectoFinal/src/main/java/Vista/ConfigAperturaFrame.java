@@ -1,42 +1,56 @@
 package Vista;
 
-import java.awt.EventQueue;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import Utilidades.FuncionesApertura;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+@SuppressWarnings("serial")
 public class ConfigAperturaFrame extends JFrame {
+    private JTextField horaTextField;
+    private JButton configurarButton;
+    private JButton volverButton;
 
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+    public ConfigAperturaFrame() {
+        setTitle("Configurar Hora de Apertura");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ConfigAperturaFrame frame = new ConfigAperturaFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+        JLabel horaLabel = new JLabel("Hora de Apertura (HH:mm):");
+        horaLabel.setBounds(10, 20, 200, 25);
+        add(horaLabel);
 
-	/**
-	 * Create the frame.
-	 */
-	public ConfigAperturaFrame() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        horaTextField = new JTextField();
+        horaTextField.setBounds(180, 20, 100, 25);
+        add(horaTextField);
 
-		setContentPane(contentPane);
-	}
+        configurarButton = new JButton("Configurar");
+        configurarButton.setBounds(80, 60, 140, 25);
+        configurarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FuncionesApertura.configurarHora(horaTextField.getText());
+            }
+        });
+        add(configurarButton);
 
+        volverButton = new JButton("Volver");
+        volverButton.setBounds(80, 100, 140, 25);
+        volverButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+        add(volverButton);
+
+        setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        ConfigAperturaFrame frame = new ConfigAperturaFrame();
+        frame.setVisible(true);
+    }
 }

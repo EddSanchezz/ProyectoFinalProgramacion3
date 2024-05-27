@@ -1,12 +1,12 @@
 package Utilidades;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
+
 import Excepciones.EventoRegistradoException;
-import Excepciones.UsuarioRegistradoException;
 import Modelo.Evento;
 import Modelo.Locacion;
-import Modelo.Usuario;
 import Persistencia.Repositorio;
 
 public class FuncionesEvento {
@@ -14,7 +14,7 @@ public class FuncionesEvento {
     /**
      * previene la instanciacion
      */
-    private FuncionesEvento() {}
+    public FuncionesEvento() {}
 
     /**
      * metodo encargado de registrar un evento
@@ -22,18 +22,20 @@ public class FuncionesEvento {
      * @throws EventoRegistradoException
      * @throws IOException
      */
-    public static void registrarEvento(Evento evento) throws EventoRegistradoException, IOException
-    {
+    public static boolean registrarEvento(boolean disponible, String nombre, LocalDate fecha, String lugar, ArrayList<String> artistas,
+            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos, Locacion locacion) throws IOException {
+        Evento evento = new Evento(disponible, nombre, fecha, lugar, artistas, precioBoletaBronce, precioBoletaPlata, precioBoletaOro, cantAsientos, locacion);
         Repositorio<Evento> repo = Evento.repositorio();
 
-        for (Evento u: repo.todos()) {
+        for (Evento u : repo.todos()) {
             if (u.getNombre().equals(evento.getNombre())) {
-                throw new EventoRegistradoException("el evento ya existe.");
+                return false;
             }
         }
 
         evento.setId(null); // identificador en nulo para crear un nuevo recurso
         repo.escribir(evento); // crear el recurso
+        return true;
     }
 
     /**
@@ -70,7 +72,49 @@ public class FuncionesEvento {
         return true;
     }
     
+    public static ArrayList<Locacion> CatalogoLocaciones() throws IOException{
+        Repositorio<Locacion> repo = Locacion.repositorio();
+        ArrayList<Locacion> locaciones = (ArrayList<Locacion>) repo.todos();
+        return locaciones;
+    }
     
+    public static Locacion buscarLocacionPorNombre(String nombre)throws IOException {
+        for (Locacion locacion : CatalogoLocaciones()) {
+            if (locacion.getNombre()==nombre) {
+                return locacion;
+            }
+        }
+        return null;
+    }
+
+	public static ArrayList<Evento> getEventosPorLocacion(Locacion locacionSeleccionada) throws IOException {
+		Repositorio<Evento> repo = Evento.repositorio();
+        ArrayList<Evento> eventos = (ArrayList<Evento>) repo.todos();
+        ArrayList<Evento> eventosLocacion = new ArrayList<>();
+        
+        for(Evento u: eventos) {
+        	if(u.getLocacion() == locacionSeleccionada.getNombre()) {
+        		eventosLocacion.add(u);
+        	}
+        }
+		
+		return eventosLocacion;
+	}
+	
+	public static ArrayList<Evento> getEventosPorLocacion(String nombreLocacion) throws IOException {
+	    Repositorio<Evento> repo = Evento.repositorio();
+	    ArrayList<Evento> eventos = (ArrayList<Evento>) repo.todos();
+	    ArrayList<Evento> eventosLocacion = new ArrayList<>();
+
+	    for (Evento evento : eventos) {
+	        if (evento.getLocacion() == nombreLocacion) {
+	            eventosLocacion.add(evento);
+	        }
+	    }
+
+	    return eventosLocacion;
+	}
+
 
 
 }

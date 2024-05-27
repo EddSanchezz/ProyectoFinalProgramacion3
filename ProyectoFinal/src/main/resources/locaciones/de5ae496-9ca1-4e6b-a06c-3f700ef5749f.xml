@@ -2,13 +2,13 @@
 <java version="22" class="java.beans.XMLDecoder">
  <object class="Modelo.Locacion">
   <void property="capacidadDeAsientos">
-   <int>300</int>
+   <int>1000</int>
   </void>
   <void property="id">
-   <string>4b0821ba-e881-44f1-8e7e-4703a854d4bc</string>
+   <string>de5ae496-9ca1-4e6b-a06c-3f700ef5749f</string>
   </void>
   <void property="nombre">
-   <string>unicentro</string>
+   <string>el portal</string>
   </void>
  </object>
 </java>

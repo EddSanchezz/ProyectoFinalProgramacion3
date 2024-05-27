@@ -4,15 +4,70 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7afbab-61a2-4ecf-9b6f-98115cdd3f2e" name="Changes" comment="" />
+    <list default="true" id="de7afbab-61a2-4ecf-9b6f-98115cdd3f2e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/.project" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Modelo/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Modelo/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Utilidades/FuncionesEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Utilidades/FuncionesEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/AdminFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/AdminFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/ConfigAperturaFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/ConfigAperturaFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/EventoAdminFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/EventoAdminFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/ListaDeEventosFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/ListaDeEventosFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/SetEventoFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/SetEventoFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/SetLocacionFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/SetLocacionFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/UsuarioFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/src/main/java/Vista/UsuarioFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/resources/eventos/03fc9ec9-601c-4ef9-b2da-e953f8bb546a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/resources/eventos/90b12f1c-1178-4809-bcfa-a632ee4857fd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/resources/locaciones/4b0821ba-e881-44f1-8e7e-4703a854d4bc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/src/main/resources/locaciones/4ebb240e-335e-4b96-8d9c-11c3946d08ba.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Autenticador.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Autenticador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Credenciales.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Credenciales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/GestionTransacciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/GestionTransacciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/MetodoPago.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/MetodoPago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/tipoBoleta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/tipoBoleta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/EventoRegistradoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/EventoRegistradoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/UsuarioRegistradoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/UsuarioRegistradoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Administrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Administrador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Boleta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Boleta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Evento.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Evento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/MetodoPago.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/MetodoPago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Persistible.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Persistible.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Repositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Repositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesEvento.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesEvento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/Persistencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/Persistencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/eventos/03fc9ec9-601c-4ef9-b2da-e953f8bb546a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/eventos/90b12f1c-1178-4809-bcfa-a632ee4857fd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/test-classes/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/test-classes/AppTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EddSanchezz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EddSanchezz/ProyectoFinalProgramacion3.git&quot;,
+    &quot;accountId&quot;: &quot;4d353781-a1a7-4dc9-beea-80984b12e970&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ebfcmiZqvkDdsLHr9GMP4qxsOP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,12 +77,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/metzu/Documents/GitHub/ProyectoFinalProgramacion3",
+    "last_opened_file_path": "C:/Users/metzu/Documents/GitHub/ProyectoFinalProgramacion3/ProyectoFinal",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,6 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712178283945</updated>
       <workItem from="1712178285178" duration="273000" />
+      <workItem from="1716771553219" duration="164000" />
+      <workItem from="1716771743841" duration="23000" />
     </task>
     <servers />
   </component>

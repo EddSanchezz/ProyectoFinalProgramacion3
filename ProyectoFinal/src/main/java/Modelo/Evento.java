@@ -3,12 +3,11 @@ package Modelo;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
-
 import Persistencia.Persistible;
 import Persistencia.Repositorio;
 
 
+@SuppressWarnings("serial")
 public class Evento implements Persistible, Serializable{
     private boolean disponible;
     private String nombre;
@@ -23,7 +22,8 @@ public class Evento implements Persistible, Serializable{
     private int cantAsientosPlata;
     private int cantAsientosOro;
     private String id;
-    private Locacion locacion;
+    private String locacion;
+    private int limiteAsientos;
 
     /**
      * constructor vacio para serializacion
@@ -52,7 +52,8 @@ public class Evento implements Persistible, Serializable{
         this.precioBoletaBronce = precioBoletaBronce;
         this.precioBoletaPlata = precioBoletaPlata;
         this.precioBoletaOro = precioBoletaOro;
-        this.locacion = locacion;
+        this.locacion = locacion.getNombre();
+        this.limiteAsientos = locacion.getCapacidadDeAsientos();
         setCantAsientos(cantAsientos);  // Usa el método setCantAsientos para establecer la cantidad de asientos
     }
 
@@ -235,18 +236,36 @@ public class Evento implements Persistible, Serializable{
     public int getCantAsientos() {
         return cantAsientos;
     }
+    
+    
 
-    /**
+    public String getLocacion() {
+		return locacion;
+	}
+
+	public void setLocacion(String locacion) {
+		this.locacion = locacion;
+	}
+
+	public int getLimiteAsientos() {
+		return limiteAsientos;
+	}
+
+	public void setLimiteAsientos(int limiteAsientos) {
+		this.limiteAsientos = limiteAsientos;
+	}
+
+	/**
      * establece la cantidad de asientos
      * @param cantAsientos
      */
     public void setCantAsientos(int cantAsientos) {
-        if (cantAsientos > locacion.getCapacidadDeAsientos()) {
-            throw new IllegalArgumentException("La cantidad de asientos no puede ser mayor a la capacidad de la locación");
+        if (cantAsientos > limiteAsientos) {
+            this.cantAsientos = limiteAsientos;
+        }else{
+            this.cantAsientos = cantAsientos;
         }
-        this.cantAsientos = cantAsientos;
     }
-
     
     /**
      * {@inheritDoc}
@@ -273,6 +292,6 @@ public class Evento implements Persistible, Serializable{
      */
     public static Repositorio<Evento> repositorio()
     {
-        return new Repositorio<Evento>("src/main/resources/eventos");
+        return new Repositorio<Evento>("src\\main\\resources\\eventos");
     }
 }

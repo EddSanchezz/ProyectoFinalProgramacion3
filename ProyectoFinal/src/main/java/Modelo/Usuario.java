@@ -132,6 +132,6 @@ public class Usuario implements Serializable, Persistible
      */
     public static Repositorio<Usuario> repositorio()
     {
-        return new Repositorio<Usuario>("src/main/resources/usuarios");
+        return new Repositorio<Usuario>("src\\main\\resources\\usuarios");
     }
 }

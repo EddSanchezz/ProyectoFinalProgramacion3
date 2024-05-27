@@ -1,43 +1,51 @@
 package Vista;
 
-import java.awt.EventQueue;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import Modelo.Evento;
+import Utilidades.FuncionesEvento;
 
-//VENTANA QUE MUESTRA LOS EVENTOS AL USUARIO
+import java.awt.*;
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class ListaDeEventosFrame extends JFrame {
+    private JComboBox<String> comboBox;
 
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+    public ListaDeEventosFrame(String loc) {
+    	ArrayList<Evento> eventos;
+		try {
+			eventos = FuncionesEvento.getEventosPorLocacion(loc);
+			// Añadir las ubicaciones de los eventos al JComboBox
+	        for (Evento evento : eventos) {
+	            comboBox.addItem(evento.getNombre());
+	        }
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        // Crear el JComboBox
+        comboBox = new JComboBox<>();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ListaDeEventosFrame frame = new ListaDeEventosFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+        
 
-	/**
-	 * Create the frame.
-	 */
-	public ListaDeEventosFrame() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        // Configurar el JComboBox
+        comboBox.setFont(new Font("Arial", Font.PLAIN, 14));
+        comboBox.setPreferredSize(new Dimension(200, 30));
 
-		setContentPane(contentPane);
-	}
+        // Crear un panel para añadir un borde alrededor del JComboBox
+        JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
+        panel.add(comboBox);
 
+        // Añadir el panel al JFrame
+        this.add(panel);
+
+        // Configurar el JFrame
+        this.setTitle("Lista de Eventos");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(true);
+        this.pack();
+        this.setVisible(true);
+    }
 }

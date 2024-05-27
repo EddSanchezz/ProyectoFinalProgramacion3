@@ -64,7 +64,7 @@ public class LoginFrame extends JFrame {
         getContentPane().add(panel);
         
         JLabel lblFondo = new JLabel("New label");
-        lblFondo.setIcon(new ImageIcon("src\\\\main\\\\java\\\\Recursos\\\\Wallpaper.jpg"));
+        lblFondo.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
         lblFondo.setBounds(0, 0, 584, 361);
         panel.add(lblFondo);
         setVisible(true);
