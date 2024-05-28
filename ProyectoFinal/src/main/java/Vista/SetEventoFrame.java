@@ -164,9 +164,9 @@ public class SetEventoFrame extends JFrame {
                 LocalDate fecha = LocalDate.parse(fechaField.getText());
                 String lugar = lugarField.getText();
                 ArrayList<String> artistas = new ArrayList<>(Arrays.asList(artistasField.getText().split(",")));
-                Double precioBoletaBronce = Double.parseDouble(precioBoletaBronceField.getText());
-                Double precioBoletaPlata = Double.parseDouble(precioBoletaPlataField.getText());
-                Double precioBoletaOro = Double.parseDouble(precioBoletaOroField.getText());
+                int precioBoletaBronce = Integer.parseInt(precioBoletaBronceField.getText());
+                int precioBoletaPlata = Integer.parseInt(precioBoletaPlataField.getText());
+                int precioBoletaOro = Integer.parseInt(precioBoletaOroField.getText());
                 int cantAsientos = Integer.parseInt(cantAsientosField.getText());
                 
                 

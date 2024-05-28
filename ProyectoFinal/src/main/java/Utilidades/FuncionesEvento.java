@@ -23,7 +23,7 @@ public class FuncionesEvento {
      * @throws IOException
      */
     public static boolean registrarEvento(boolean disponible, String nombre, LocalDate fecha, String lugar, ArrayList<String> artistas,
-            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos, Locacion locacion) throws IOException {
+            int precioBoletaBronce, int precioBoletaPlata, int precioBoletaOro, int cantAsientos, Locacion locacion) throws IOException {
         Evento evento = new Evento(disponible, nombre, fecha, lugar, artistas, precioBoletaBronce, precioBoletaPlata, precioBoletaOro, cantAsientos, locacion);
         Repositorio<Evento> repo = Evento.repositorio();
 

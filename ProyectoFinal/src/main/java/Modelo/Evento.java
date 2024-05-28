@@ -14,9 +14,9 @@ public class Evento implements Persistible, Serializable{
     private String fecha;
     private String lugar;
     private ArrayList<String> artistas;
-    private Double precioBoletaBronce;
-    private Double precioBoletaPlata;
-    private Double precioBoletaOro;
+    private int precioBoletaBronce;
+    private int precioBoletaPlata;
+    private int precioBoletaOro;
     private int cantAsientos;
     private int cantAsientosBronce;
     private int cantAsientosPlata;
@@ -43,7 +43,7 @@ public class Evento implements Persistible, Serializable{
      * @param cantAsientos
      */
     public Evento(boolean disponible, String nombre, LocalDate fecha, String lugar, ArrayList<String> artistas,
-            Double precioBoletaBronce, Double precioBoletaPlata, Double precioBoletaOro, int cantAsientos, Locacion locacion) {  // Agrega el parámetro locacion
+            int precioBoletaBronce, int precioBoletaPlata, int precioBoletaOro, int cantAsientos, Locacion locacion) {  // Agrega el parámetro locacion
         this.disponible = disponible;
         this.nombre = nombre;
         this.fecha = fecha.toString();
@@ -185,7 +185,7 @@ public class Evento implements Persistible, Serializable{
      * obtiene el precio de la boleta de bronce
      * @return precioBoletaBronce
      */
-    public Double getPrecioBoletaBronce() {
+    public int getPrecioBoletaBronce() {
         return precioBoletaBronce;
     }
 
@@ -193,7 +193,7 @@ public class Evento implements Persistible, Serializable{
      * establece el precio de la boleta de bronce
      * @param precioBoletaBronce
      */
-    public void setPrecioBoletaBronce(Double precioBoletaBronce) {
+    public void setPrecioBoletaBronce(int precioBoletaBronce) {
         this.precioBoletaBronce = precioBoletaBronce;
     }
 
@@ -201,7 +201,7 @@ public class Evento implements Persistible, Serializable{
      * obtiene el precio de la boleta de plata
      * @return precioBoletaPlata
      */
-    public Double getPrecioBoletaPlata() {
+    public int getPrecioBoletaPlata() {
         return precioBoletaPlata;
     }
 
@@ -209,7 +209,7 @@ public class Evento implements Persistible, Serializable{
      * estabelce el precio de la boleta de plata
      * @param precioBoletaPlata
      */
-    public void setPrecioBoletaPlata(Double precioBoletaPlata) {
+    public void setPrecioBoletaPlata(int precioBoletaPlata) {
         this.precioBoletaPlata = precioBoletaPlata;
     }
 
@@ -217,7 +217,7 @@ public class Evento implements Persistible, Serializable{
      * devuelve el precio de la boleta de oro
      * @return precioBoletaOro
      */
-    public Double getPrecioBoletaOro() {
+    public int getPrecioBoletaOro() {
         return precioBoletaOro;
     }
 
@@ -225,7 +225,7 @@ public class Evento implements Persistible, Serializable{
      * establece el precio de la boleta de oro
      * @param precioBoletaOro
      */
-    public void setPrecioBoletaOro(Double precioBoletaOro) {
+    public void setPrecioBoletaOro(int precioBoletaOro) {
         this.precioBoletaOro = precioBoletaOro;
     }
 
