@@ -1,56 +1,54 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
-import Enum.tipoBoleta;
+import Persistencia.Persistible;
+import Persistencia.Repositorio;
 
-/**
- *
- * @author metzu
- */
-public class Boleta {
-    private tipoBoleta categoria;
-    private boolean disponible;
-    private String nombre;
+public class Boleta implements Persistible {
+    private String evento;
+    private int numeroSilla;
+    private int precioSilla;
     private String id;
 
-    public Boleta(){}
-
-    public Boleta(tipoBoleta categoria, boolean disponible) {
-        this.categoria = categoria;
-        this.disponible = disponible;
+    public Boleta(String evento, int numeroSilla, int precioSilla) {
+        this.evento = evento;
+        this.numeroSilla = numeroSilla;
+        this.precioSilla = precioSilla;
     }
 
-    public tipoBoleta getCategoria() {
-        return categoria;
-    }
-    public void setCategoria(tipoBoleta categoria) {
-        this.categoria = categoria;
-    }
-    public boolean isDisponible() {
-        return disponible;
-    }
-    public void setDisponible(boolean disponible) {
-        this.disponible = disponible;
+    public String getEvento() {
+        return evento;
     }
 
-    public void setNombreBoleta(String nombre){
-        this.nombre = nombre;
+    public void setEvento(String evento) {
+        this.evento = evento;
     }
 
-    public void setIdentificacion(String id){
-        this.id = id;
-    }
-    
-    public String getNombreBoleta(){
-        return nombre;
+    public int getNumeroSilla() {
+        return numeroSilla;
     }
 
-    public String getIdBoleta(){
-        return id;
+    public void setNumeroSilla(int numeroSilla) {
+        this.numeroSilla = numeroSilla;
     }
 
-    
+    public int getPrecioSilla() {
+        return precioSilla;
+    }
+
+    public void setPrecioSilla(int precioSilla) {
+        this.precioSilla = precioSilla;
+    }
+
+    @Override
+    public String getId() {
+        return "";
+    }
+
+    @Override
+    public void setId(String id) {
+
+    }
+
+
 }
+

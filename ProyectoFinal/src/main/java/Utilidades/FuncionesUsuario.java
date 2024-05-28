@@ -15,11 +15,12 @@ public final class FuncionesUsuario
 
     /**
      * registra un nuevo usuario
-     * 
-     * @param usuario usuario a registrar
-     *  
-     * @throws UsuarioRegistradoException cuando el correo ya ha sido tomado
-     * @throws IOException error en el manejo de ficheros
+     * @param nombre
+     * @param correo
+     * @param clave
+     * @return
+     * @throws UsuarioRegistradoException
+     * @throws IOException
      */
     public static boolean registrarUsuario(String nombre, String correo, String clave) throws UsuarioRegistradoException, IOException
     {

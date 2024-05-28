@@ -3,6 +3,8 @@ package Vista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -10,8 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-//VENTANA PARA ADMINISTRAR EVENTOS COMO ADMIN
-
+// VENTANA PARA ADMINISTRAR EVENTOS COMO ADMIN
 
 @SuppressWarnings("serial")
 public class EventoAdminFrame extends JFrame {
@@ -47,38 +48,46 @@ public class EventoAdminFrame extends JFrame {
         });
         panel.add(volverButton);
 
-        getContentPane().add(panel);
-        
-                JButton agregarLocacionButton = new JButton("Agregar Locacion");
-                agregarLocacionButton.setBounds(150, 168, 149, 32);
-                panel.add(agregarLocacionButton);
-                
-                        JButton agregarEventoButton = new JButton("Agregar Evento");
-                        agregarEventoButton.setBounds(150, 110, 149, 32);
-                        panel.add(agregarEventoButton);
-                        
-                        JLabel lblNewLabel = new JLabel("");
-                        lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
-                        lblNewLabel.setBounds(0, 0, 458, 304);
-                        panel.add(lblNewLabel);
-                        agregarEventoButton.addActionListener(new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                try {
-                                	dispose();
-									new SetEventoFrame().setVisible(true);
-								} catch (IOException e1) {
-									e1.printStackTrace();
-								}
-                            }
-                        });
-                agregarLocacionButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                    	dispose();
-                        new SetLocacionFrame().setVisible(true);
-                    }
-                });
+        JButton agregarLocacionButton = new JButton("Agregar Locacion");
+        agregarLocacionButton.setBounds(150, 168, 149, 32);
+        panel.add(agregarLocacionButton);
+
+        JButton agregarEventoButton = new JButton("Agregar Evento");
+        agregarEventoButton.setBounds(150, 110, 149, 32);
+        panel.add(agregarEventoButton);
+
+        // Agregar JLabel con la fecha actual
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        JLabel dateLabel = new JLabel("Fecha actual: " + today.format(formatter));
+        dateLabel.setBounds(10, 10, 200, 20); // Ajusta los límites según sea necesario
+        panel.add(dateLabel);
+
+        JLabel lblNewLabel = new JLabel("");
+        lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
+        lblNewLabel.setBounds(0, 0, 458, 304);
+        panel.add(lblNewLabel);
+
+        agregarEventoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    dispose();
+                    new SetEventoFrame().setVisible(true);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
+
+        agregarLocacionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new SetLocacionFrame().setVisible(true);
+            }
+        });
+
         setVisible(true);
     }
 
@@ -86,4 +95,3 @@ public class EventoAdminFrame extends JFrame {
         new EventoAdminFrame();
     }
 }
-
