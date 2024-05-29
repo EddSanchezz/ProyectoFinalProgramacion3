@@ -43,7 +43,7 @@ public class ListaDeLocacionesFrame extends JFrame {
         contentPane.setLayout(null);
 
         ArrayList<Locacion> locaciones;
-        locaciones = FuncionesEvento.CatalogoLocaciones();
+        locaciones = FuncionesEvento.catalogoLocaciones();
         comboBox = new JComboBox<>();
         for (Locacion u : locaciones) {
             comboBox.addItem(u.getNombre());
