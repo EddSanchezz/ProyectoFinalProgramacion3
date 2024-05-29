@@ -11,15 +11,10 @@ import java.util.ArrayList;
 
 public class ListaDeEventosFrame extends JFrame {
     private JComboBox<String> comboBox;
-    private String loc;
 
     public ListaDeEventosFrame(String loc) {
-<<<<<<< HEAD
         comboBox = new JComboBox<String>();
 
-=======
-        this.loc = loc;
->>>>>>> 6f314437fa87f4c86bb8d71090fda19edfd1608e
     	ArrayList<Evento> eventos;
 		try {
             System.out.println(FuncionesEvento.getEventosPorLocacion(FuncionesEvento.buscarLocacionPorNombre(loc)));
@@ -30,6 +25,7 @@ public class ListaDeEventosFrame extends JFrame {
 	            comboBox.addItem(evento.getNombre());
 	        }
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         // Crear el JComboBox
