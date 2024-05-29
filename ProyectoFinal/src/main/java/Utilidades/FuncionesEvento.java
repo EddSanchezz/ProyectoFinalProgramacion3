@@ -18,9 +18,6 @@ public class FuncionesEvento {
 
     /**
      * metodo encargado de registrar un evento
-     * @param evento
-     * @throws EventoRegistradoException
-     * @throws IOException
      */
     public static boolean registrarEvento(boolean disponible, String nombre, LocalDate fecha, String lugar, ArrayList<String> artistas,
             int precioBoletaBronce, int precioBoletaPlata, int precioBoletaOro, int cantAsientos, Locacion locacion) throws IOException {
@@ -80,7 +77,7 @@ public class FuncionesEvento {
     
     public static Locacion buscarLocacionPorNombre(String nombre)throws IOException {
         for (Locacion locacion : CatalogoLocaciones()) {
-            if (locacion.getNombre()==nombre) {
+            if (locacion.getNombre().equals(nombre)) {
                 return locacion;
             }
         }
@@ -93,7 +90,7 @@ public class FuncionesEvento {
         ArrayList<Evento> eventosLocacion = new ArrayList<>();
         
         for(Evento u: eventos) {
-        	if(u.getLocacion() == locacionSeleccionada.getNombre()) {
+        	if(u.getLocacion().equals(locacionSeleccionada.getNombre())) {
         		eventosLocacion.add(u);
         	}
         }

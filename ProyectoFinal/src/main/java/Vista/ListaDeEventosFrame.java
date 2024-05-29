@@ -13,9 +13,13 @@ public class ListaDeEventosFrame extends JFrame {
     private JComboBox<String> comboBox;
 
     public ListaDeEventosFrame(String loc) {
+        comboBox = new JComboBox<String>();
+
     	ArrayList<Evento> eventos;
 		try {
-			eventos = FuncionesEvento.getEventosPorLocacion(loc);
+            System.out.println(FuncionesEvento.getEventosPorLocacion(FuncionesEvento.buscarLocacionPorNombre(loc)));
+
+			eventos = FuncionesEvento.getEventosPorLocacion(FuncionesEvento.buscarLocacionPorNombre(loc));
 			// Añadir las ubicaciones de los eventos al JComboBox
 	        for (Evento evento : eventos) {
 	            comboBox.addItem(evento.getNombre());
@@ -25,7 +29,7 @@ public class ListaDeEventosFrame extends JFrame {
 			e.printStackTrace();
 		}
         // Crear el JComboBox
-        comboBox = new JComboBox<>();
+        // comboBox = new JComboBox<>();
 
         
 

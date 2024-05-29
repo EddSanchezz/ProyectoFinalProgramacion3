@@ -168,7 +168,9 @@ public class SetEventoFrame extends JFrame {
                 int precioBoletaPlata = Integer.parseInt(precioBoletaPlataField.getText());
                 int precioBoletaOro = Integer.parseInt(precioBoletaOroField.getText());
                 int cantAsientos = Integer.parseInt(cantAsientosField.getText());
-                
+
+
+                System.out.println("registrando.");
                 
                 
 				try {

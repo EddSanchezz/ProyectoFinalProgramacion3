@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22.0.1" class="java.beans.XMLDecoder">
+ <object class="Modelo.Usuario">
+  <void property="clave">
+   <string>123asd</string>
+  </void>
+  <void property="correo">
+   <string>antoquiphack@gmail.com</string>
+  </void>
+  <void property="id">
+   <string>a932cb07-c966-4dfb-a412-23ba0c47ba76</string>
+  </void>
+  <void property="nombre">
+   <string>pepe</string>
+  </void>
+ </object>
+</java>

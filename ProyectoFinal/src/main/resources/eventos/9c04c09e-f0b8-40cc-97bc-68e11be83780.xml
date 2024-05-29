@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22.0.1" class="java.beans.XMLDecoder">
+ <object class="Modelo.Evento">
+  <void property="artistas">
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>jose</string>
+    </void>
+   </object>
+  </void>
+  <void property="cantAsientos">
+   <int>300</int>
+  </void>
+  <void property="disponible">
+   <boolean>true</boolean>
+  </void>
+  <void property="id">
+   <string>9c04c09e-f0b8-40cc-97bc-68e11be83780</string>
+  </void>
+  <void property="limiteAsientos">
+   <int>1000</int>
+  </void>
+  <void property="locacion">
+   <string>unicentro</string>
+  </void>
+  <void property="lugar">
+   <string>armenia</string>
+  </void>
+  <void property="nombre">
+   <string>fknews</string>
+  </void>
+  <void property="precioBoletaBronce">
+   <int>30</int>
+  </void>
+  <void property="precioBoletaOro">
+   <int>60</int>
+  </void>
+  <void property="precioBoletaPlata">
+   <int>30</int>
+  </void>
+ </object>
+</java>
