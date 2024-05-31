@@ -12,6 +12,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -21,6 +22,7 @@ import Utilidades.FuncionesEvento;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 @SuppressWarnings("serial")
 public class SetEventoFrame extends JFrame {
@@ -115,6 +117,23 @@ public class SetEventoFrame extends JFrame {
         panel.add(label_8);
         cantAsientosField = new JTextField();
         cantAsientosField.addKeyListener(new KeyAdapter() {
+        	@Override
+        	public void keyReleased(KeyEvent e) {
+        		// Obtiene la locación seleccionada
+                String nombreLocacion = (String) locacionComboBox.getSelectedItem();
+                Locacion locacion;
+				try {
+					locacion = FuncionesEvento.buscarLocacionPorNombre(nombreLocacion);
+					// Comprueba si la cantidad de asientos ingresada excede el límite de la locación
+	                if (Integer.parseInt(cantAsientosField.getText()) > locacion.getCapacidadDeAsientos()) {
+	                    JOptionPane.showMessageDialog(null, "La cantidad de asientos no puede ser mayor a la capacidad de la locación (limite: " + locacion.getCapacidadDeAsientos()+ ")", "Error", JOptionPane.ERROR_MESSAGE);
+	                    cantAsientosField.setText(String.valueOf(locacion.getCapacidadDeAsientos()));
+	                }
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
+
+        	}
         });
         cantAsientosField.setBounds(259, 286, 224, 20);
         panel.add(cantAsientosField);
@@ -124,7 +143,7 @@ public class SetEventoFrame extends JFrame {
         label_9.setBounds(88, 250, 171, 31);
         panel.add(label_9);
      // Crea un array con los nombres de las locaciones
-        ArrayList<Locacion> locaciones = FuncionesEvento.catalogoLocaciones();
+        ArrayList<Locacion> locaciones = FuncionesEvento.CatalogoLocaciones();
         String[] nombresLocaciones = new String[locaciones.size()];
         for (int i = 0; i < locaciones.size(); i++) {
             nombresLocaciones[i] = locaciones.get(i).getNombre();
@@ -149,15 +168,25 @@ public class SetEventoFrame extends JFrame {
                 int precioBoletaPlata = Integer.parseInt(precioBoletaPlataField.getText());
                 int precioBoletaOro = Integer.parseInt(precioBoletaOroField.getText());
                 int cantAsientos = Integer.parseInt(cantAsientosField.getText());
-			try {
-                            Locacion locacion = FuncionesEvento.buscarLocacionPorNombre((String) locacionComboBox.getSelectedItem());
-                            FuncionesEvento.registrarEvento(disponible, nombre, fecha, lugar, artistas, precioBoletaBronce, precioBoletaPlata, precioBoletaOro, cantAsientos, locacion);
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			} catch (IllegalArgumentException ef) {
-				ef.printStackTrace();
-			}
 
+
+                System.out.println("registrando.");
+                
+                
+				try {
+					Locacion locacion = FuncionesEvento.buscarLocacionPorNombre((String) locacionComboBox.getSelectedItem());
+					boolean eventoCreado = FuncionesEvento.registrarEvento(disponible, nombre, fecha, lugar, artistas, precioBoletaBronce, precioBoletaPlata, precioBoletaOro, cantAsientos, locacion);
+					if (eventoCreado) {
+	                    JOptionPane.showMessageDialog(null, "El evento se guardó correctamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+	                } else {
+	                    JOptionPane.showMessageDialog(null, "El evento ya existe", "Error", JOptionPane.ERROR_MESSAGE);
+	                }
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				} catch (IllegalArgumentException ef) {
+					ef.printStackTrace();
+				}
+                
             }
         });
         panel.add(crearEventoButton);
@@ -176,7 +205,7 @@ public class SetEventoFrame extends JFrame {
         panel.add(volverButton);
 
         getContentPane().add(panel);
-
+        
         JLabel lblNewLabel = new JLabel("");
         lblNewLabel.setIcon(new ImageIcon("src\\main\\java\\Recursos\\Wallpaper.jpg"));
         lblNewLabel.setBounds(0, 0, 518, 343);
