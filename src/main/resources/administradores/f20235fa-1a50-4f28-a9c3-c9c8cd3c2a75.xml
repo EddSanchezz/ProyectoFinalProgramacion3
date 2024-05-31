@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="22" class="java.beans.XMLDecoder">
+ <object class="Modelo.Administrador">
+  <void property="clave">
+   <string>123</string>
+  </void>
+  <void property="correo">
+   <string>123</string>
+  </void>
+  <void property="id">
+   <string>f20235fa-1a50-4f28-a9c3-c9c8cd3c2a75</string>
+  </void>
+  <void property="nombre">
+   <string>123</string>
+  </void>
+ </object>
+</java>

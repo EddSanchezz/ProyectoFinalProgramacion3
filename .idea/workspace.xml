@@ -4,15 +4,111 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7afbab-61a2-4ecf-9b6f-98115cdd3f2e" name="Changes" comment="" />
+    <list default="true" id="de7afbab-61a2-4ecf-9b6f-98115cdd3f2e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/src/main/java/org/example/myjavafxapp/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/src/main/java/org/example/myjavafxapp/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/src/main/java/org/example/myjavafxapp/Operador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/src/main/resources/org/example/myjavafxapp/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyJavaFxApp/src/main/resources/org/example/myjavafxapp/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/Evento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/EventoViewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/org/example/demo/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/imagenes/imagen2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/org/example/demo/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/src/main/java/java/lang/Object.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/src/main/java/org/example/interfaz/Paths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaz/src/main/resources/org/example/interfaz/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcial3/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Autenticador.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Autenticador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Credenciales.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Autenticacion/Credenciales.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/GestionTransacciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Controlador/GestionTransacciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/MetodoPago.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/MetodoPago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/tipoBoleta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Enum/tipoBoleta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/EventoRegistradoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/EventoRegistradoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/UsuarioRegistradoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Excepciones/UsuarioRegistradoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Administrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Administrador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Boleta.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Boleta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Evento.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Evento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/MetodoPago.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/MetodoPago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Modelo/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Persistible.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Persistible.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Repositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Persistencia/Repositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesEvento.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesEvento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/FuncionesUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/Persistencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/classes/Utilidades/Persistencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/target/test-classes/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/target/test-classes/AppTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/interfaz" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EddSanchezz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EddSanchezz/ProyectoFinalProgramacion3.git&quot;,
+    &quot;accountId&quot;: &quot;4d353781-a1a7-4dc9-beea-80984b12e970&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ebfcmiZqvkDdsLHr9GMP4qxsOP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,12 +118,33 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/metzu/Documents/GitHub/ProyectoFinalProgramacion3",
+    "last_opened_file_path": "C:/Users/metzu/Documents/GitHub/ProyectoFinalProgramacion3/ProyectoFinal",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,6 +154,12 @@
       <option name="presentableId" value="Default" />
       <updated>1712178283945</updated>
       <workItem from="1712178285178" duration="273000" />
+      <workItem from="1716771553219" duration="164000" />
+      <workItem from="1716771743841" duration="23000" />
+      <workItem from="1716932705404" duration="258000" />
+      <workItem from="1716939185077" duration="42000" />
+      <workItem from="1716940554575" duration="17000" />
+      <workItem from="1716940614166" duration="34000" />
     </task>
     <servers />
   </component>
